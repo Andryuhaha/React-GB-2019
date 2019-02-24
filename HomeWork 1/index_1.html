@@ -19,11 +19,18 @@
 
 	<script>
 		function loop(times = 0, callback = null) {
-			if (times > 0 && callback && typeof callback === 'function') {
+
+			if (times > 0 && typeof callback === 'function') {
+
 				for (let i = 0; i !== times; i++) {
 					callback(i + 1);
 				}
 			}
+			/*if (times > 0 && callback && typeof callback === 'function') {
+				for (let i = 0; i !== times; i++) {
+					callback(i + 1);
+				}
+			}*/
 		}
 		console.log(`Решение задания №1:`);
 
