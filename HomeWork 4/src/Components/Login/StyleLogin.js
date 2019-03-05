@@ -1,4 +1,4 @@
-export const styles = {
+export default {
     container: { 
         'backgroundColor': 'dodgerblue',
         'textAlign': 'center',
@@ -8,4 +8,4 @@ export const styles = {
         'marginLeft': '5px',
         'marginBottom': '10px'
     }
-};
+}
