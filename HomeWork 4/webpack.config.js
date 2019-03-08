@@ -1,10 +1,15 @@
-const path = require('path');
+const path = require('path'),
+    HTMLplugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/App.js',
+    entry: path.resolve(__dirname, 'src', 'App.js'),
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname,'dist')
+        path: path.resolve(__dirname, 'dist')
+    },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
@@ -19,5 +24,10 @@ module.exports = {
             }
         ]
     },
-    mode: 'development'
-}
+    plugins :[
+        new HTMLplugin({
+            template: path.resolve(__dirname, 'src', 'index.html'),
+            filename: 'index.html'
+        }),
+    ],
+};

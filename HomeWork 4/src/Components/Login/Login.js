@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
+import { withStyles } from '@material-ui/styles';
 import LoginItems from './LoginItems';
-import { styles } from './StyleLogin.js'
+import styles from './StyleLogin.js';
 
 class Login extends Component {
     render() {
+        const loginItems = [
+            {type: "text", title: "Введите ваш логин"},
+            {type: "password", title: "Введите ваш пароль"},
+            {type: "button", title: "Войти"}
+        ];
 
-        const items = this.props.items.map((item, index) => {
+        const items = loginItems.map((item, index) => {
             return <LoginItems key={index} type={item.type} value={item.title} />
         });
 
@@ -20,4 +26,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withStyles(styles)(Login);
