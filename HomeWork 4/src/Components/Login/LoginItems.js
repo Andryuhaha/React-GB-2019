@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { styles } from './StyleLogin.js'
+import styles from './StyleLogin.js'
+import { withStyles } from '@material-ui/styles';
 
 class LoginItems extends React.Component {
     render() {
@@ -18,4 +19,4 @@ LoginItems.propTypes = {
     title: PropTypes.string.isRequired,
 };
 
-export default LoginItems;
+export default withStyles(styles)(LoginItems);
