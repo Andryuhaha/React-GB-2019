@@ -8,6 +8,8 @@ import MainPage from './Pages/Main';
 import User from './Pages/User';
 import Users from './Pages/Users';
 import PageNotFound from './Pages/PageNotFound';
+import Post from './Pages/Post';
+import Posts from './Pages/Posts';
 //последнюю проверку Route ставим  * тогда все верхние сработают
 
 const app = document.querySelector('#root');
@@ -19,6 +21,9 @@ ReactDOM.render(
             <IndexRoute component={MainPage} />
             <Route path="users" component={Users}>
                 <Route path=":userId" component={User} />
+            </Route>
+            <Route path="posts" component={Posts}>
+                <Route path=":userId" component={Post} />
             </Route>
             <Route path='*' component={PageNotFound} /> 
         </Route>

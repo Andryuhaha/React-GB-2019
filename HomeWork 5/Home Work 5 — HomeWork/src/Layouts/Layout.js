@@ -23,8 +23,8 @@ export default class Layout extends React.Component {
                     <MenuItem href='users' active={this.isActive('/users')}>
                         Пользователи
                     </MenuItem>
-                    <MenuItem href='comments' active={this.isActive('/comments')}>
-                        Комментарии
+                    <MenuItem href='posts' active={this.isActive('/posts')}>
+                        Посты
                     </MenuItem>
                 </Menu>
 
