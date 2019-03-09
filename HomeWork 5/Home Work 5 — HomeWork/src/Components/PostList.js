@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Post from './Post';
 
-export default class PostsList extends React.Component {
+export default class PostList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

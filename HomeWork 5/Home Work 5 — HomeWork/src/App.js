@@ -23,7 +23,7 @@ ReactDOM.render(
                 <Route path=":userId" component={User} />
             </Route>
             <Route path="posts" component={Posts}>
-                <Route path=":userId" component={Post} />
+                <Route path=":title" component={Post} />
             </Route>
             <Route path='*' component={PageNotFound} /> 
         </Route>
