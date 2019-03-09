@@ -20,15 +20,15 @@ export default class Layout extends React.Component {
                     <MenuItem href='/' active={this.isActive('/')}>
                         Главная
                     </MenuItem>
-                    <MenuItem href='post' active={this.isActive('/post')}>
-                        Посты
+                    <MenuItem href='users' active={this.isActive('/users')}>
+                        Пользователи
                     </MenuItem>
                     <MenuItem href='comments' active={this.isActive('/comments')}>
                         Комментарии
                     </MenuItem>
                 </Menu>
 
-                <div className="container">
+                <div className="container"> 
                     <div className="row">
                         <div className="col-12">
                             {this.props.children}

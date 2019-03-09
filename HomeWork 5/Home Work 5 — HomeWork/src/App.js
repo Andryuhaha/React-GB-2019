@@ -5,8 +5,8 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 import Layout from './Layouts/Layout';
 import MainPage from './Pages/Main';
-import Post from './Pages/Post';
-import Comments from './Pages/Comments';
+import User from './Pages/User';
+import Users from './Pages/Users';
 import PageNotFound from './Pages/PageNotFound';
 //последнюю проверку Route ставим  * тогда все верхние сработают
 
@@ -17,11 +17,11 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={MainPage} />
-            <Route path="post" component={Post} />
-            <Route path="comments" component={Comments} />
+            <Route path="users" component={Users}>
+                <Route path=":userId" component={User} />
+            </Route>
             <Route path='*' component={PageNotFound} /> 
         </Route>
-
     </Router>
     ,
 app);
