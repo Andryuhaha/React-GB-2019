@@ -10,6 +10,8 @@ import Users from './Pages/Users';
 import PageNotFound from './Pages/PageNotFound';
 import Post from './Pages/Post';
 import Posts from './Pages/Posts';
+import Comment from './Pages/Comment';
+import Comments from './Pages/Comments';
 //последнюю проверку Route ставим  * тогда все верхние сработают
 
 const app = document.querySelector('#root');
@@ -24,6 +26,9 @@ ReactDOM.render(
             </Route>
             <Route path="posts" component={Posts}>
                 <Route path=":title" component={Post} />
+            </Route>
+            <Route path="comments" component={Comments}>
+                <Route path=":id" component={Comment} />
             </Route>
             <Route path='*' component={PageNotFound} /> 
         </Route>
